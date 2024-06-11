@@ -119,6 +119,7 @@ body {
   margin-bottom: 1.6rem;
 }
 
+.btn,
 .btn:link,
 .btn:visited {
   display: inline-block;
@@ -127,6 +128,11 @@ body {
   border-radius: 0.9rem;
   font-size: 2rem;
   font-weight: 600;
+
+  /* just necessary for .btn */
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
 
   transition: all 0.3s;
 }
@@ -154,6 +160,18 @@ body {
 
   /* Trick to add border inside */
   box-shadow: inset 0 0 0 0.3rem #fff;
+}
+
+.btn--form {
+  align-self: end;
+  padding: 1.2rem;
+  background-color: #45260a;
+  color: #fdf2e9;
+}
+
+.btn--form:hover {
+  background-color: #fdf2e9;
+  color: #555;
 }
 
 .list {
@@ -192,6 +210,19 @@ body {
 .link:active {
   color: #cf711f;
   border-bottom: 0.1rem solid transparent;
+}
+
+strong {
+  font-weight: 500;
+}
+
+*:focus {
+  outline: none;
+
+  /* outline: 4px dotted #e67e22;
+  outline-offset: 8px; */
+
+  box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
 }
 
 /* HELPER CLASS */
@@ -245,8 +276,4 @@ body {
 
 .grid--center-v {
   align-items: center;
-}
-
-strong {
-  font-weight: 500;
 }
